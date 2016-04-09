@@ -1,4 +1,8 @@
 
+var carLongitude, carLatitude;
+carLongitude = "-81";
+carLatitude = "29"
+
 // onSuccess Callback
 //   This method accepts a `Position` object, which contains
 //   the current GPS coordinates
@@ -21,6 +25,5 @@ function onError(error) {
 //
 
 function callLocation() {
-
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
 }
