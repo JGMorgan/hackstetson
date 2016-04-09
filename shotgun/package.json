@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "shotgun: An Ionic project",
   "dependencies": {
+    "express": "^4.13.4",
     "firebase": "^2.4.2",
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",
