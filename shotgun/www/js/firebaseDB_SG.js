@@ -25,13 +25,13 @@ function determineSG(name) {
             var key = childSnapshot.key();
             var childData = childSnapshot.val();
             if (childData == "yes") {
-                return true;
+                return false;
             } else {
                 // update the name to value of true
-                var mObject = {};
-                mObject[name] = 'yes';
-                var string_json = JSON.stringify({name});
-               // var updateString = "{" + name + ":'yes'}";
+               // var mObject = {};
+               // mObject[name] = 'yes';
+               // var string_json = JSON.stringify({name});
+                var updateString = "{" + Answer + ":'yes'}";
                 //var uJSON = JSON.parse(updateString);
                 newBase.update(updateString,onComplete);
                 return true;
