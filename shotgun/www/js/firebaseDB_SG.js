@@ -1,5 +1,4 @@
 // JavaScript source code
-var Firebase = require("firebase");
 var newBase = new Firebase("https://shotgunapp.firebaseio.com/");
 //newBase.auth()
 function addUser() {
@@ -15,7 +14,7 @@ var onComplete=function(error){
     if (error) {
         console.log('Synchronization failed');
     } else {
-        element.innerHTML = "changed to yes"
+        element.innerHTML = "changed to yes";
     }
 }
 
@@ -29,9 +28,26 @@ function determineSG(name) {
                 return true;
             } else {
                 // update the name to value of true
-                newBase.update({name:'yes'},onComplete);
+                var mObject = {};
+                mObject[name] = 'yes';
+                var string_json = JSON.stringify({name});
+               // var updateString = "{" + name + ":'yes'}";
+                //var uJSON = JSON.parse(updateString);
+                newBase.update(updateString,onComplete);
                 return true;
             }
         })
     })
+}
+
+function set_SG(){
+    var usersRef = newBase.child("users");
+    usersRef.set({
+        Leon: {
+            Answer: "no"
+        },
+        Andres: {
+            Answer: "no"
+        }
+    });
 }
