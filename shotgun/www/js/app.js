@@ -20,5 +20,6 @@ angular.module('starter', ['ionic','firebase'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+    
   });
 })
