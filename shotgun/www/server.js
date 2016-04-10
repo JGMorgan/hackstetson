@@ -1,16 +1,17 @@
 var express = require("express");
 var app = express();
 
+var sgenabled = false;
+
 app.route('/swag')
 
-  // show the form (GET http://localhost:1337/login)
   .get(function(req,res) {
-    res.send('If you are seeing this something really bad went really wrong');
+    res.send(sgenabled);
   })
 
-  // process the form (POST http://localhost:1337/login)
   .post(function(req, res) {
     console.log('swag');
+    sgenabled = true;
     res.redirect('http://localhost:8100/')
   });
 
