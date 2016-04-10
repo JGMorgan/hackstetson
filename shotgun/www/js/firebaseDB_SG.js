@@ -20,27 +20,37 @@ var onComplete=function(error){
 
 
 function determineSG(name) {
+    var wkk = 2;
     newBase.once("value", function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
             var key = childSnapshot.key();
             var childData = childSnapshot.val();
+            //childData = childData.toString();
             if (childData == "yes") {
-                return false;
+                wkk = 1;
+                //return true;
             } else {
-                // update the name to value of true
-               // var mObject = {};
-               // mObject[name] = 'yes';
-               // var string_json = JSON.stringify({name});
-                var updateString = "{" + Answer + ":'yes'}";
+                //wkk = 3;
+                //wkk = 0;
+                //update the name to value of true
+                //var mObject = {};
+                //mObject[name] = 'yes';
+                //var string_json = JSON.stringify({name});
+                //var updateString = "{" + Answer + ":'yes'}";
                 //var uJSON = JSON.parse(updateString);
-                newBase.update(updateString,onComplete);
-                return true;
+                //newBase.update({answer:'yes'},onComplete);
+                //return false;
             }
         })
+
+        if (wkk != 1) {
+            newBase.update({ answer: 'yes' }, onComplete);
+        }
     })
+
 }
 
-function set_SG(){
+function set_SG() {
     var usersRef = newBase.child("users");
     usersRef.set({
         Leon: {
