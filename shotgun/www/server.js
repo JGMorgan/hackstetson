@@ -10,7 +10,7 @@ app.route('/swag')
   })
 
   .post(function(req, res) {
-    console.log('swag');
+    console.log('Shotgun is now enables');
     sgenabled = true;
     res.redirect('http://localhost:8100/')
   });

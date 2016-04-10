@@ -23,8 +23,6 @@ function onError(error) {
 
 // Options: throw an error if no update is received every 30 seconds.
 //
-
-
 function callLocation() {
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
 }
