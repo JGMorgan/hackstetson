@@ -28,3 +28,7 @@ function onError(error) {
 function callLocation() {
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
 }
+
+function makePerimeter() {
+
+}

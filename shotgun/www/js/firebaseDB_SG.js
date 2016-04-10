@@ -28,9 +28,9 @@ function determineSG(name) {
             //childData = childData.toString();
             if (childData == "yes") {
                 wkk = 1;
-                return wkk=1;
+                //return true;
             } else {
-                wkk = 3;
+                //wkk = 3;
                 //wkk = 0;
                 //update the name to value of true
                 //var mObject = {};
@@ -42,11 +42,12 @@ function determineSG(name) {
                 //return false;
             }
         })
+
+        if (wkk != 1) {
+            newBase.update({ answer: 'yes' }, onComplete);
+        }
     })
 
-    if (wkk != 2) {
-        newBase.update({ answer: 'yes' }, onComplete);
-    }
 }
 
 function set_SG() {
