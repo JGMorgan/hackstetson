@@ -14,7 +14,8 @@ var onComplete=function(error){
     if (error) {
         console.log('Synchronization failed');
     } else {
-        element.innerHTML = "changed to yes";
+        //element.innerHTML = "changed to yes";
+        driverStart();
     }
 }
 
@@ -60,4 +61,27 @@ function set_SG() {
             Answer: "no"
         }
     });
+}
+
+var sendNotification = function (error) {
+    if (error) {
+        console.log('Synchronization failed');
+    } else {
+        //element.innerHTML = "changed to yes";
+        console.log('Synchronization success');
+    }
+}
+
+function driverStart() {
+    /*
+    navigator.notification.alert(
+    'You are shotgun!',  // message
+    sendNotification,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+    );
+    */
+    alert("You are shotgun!");
+    //
+
 }
