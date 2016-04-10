@@ -1,8 +1,15 @@
 function enableShotgun(){
+  var check = 0;
   var element = document.getElementById('firebaseCall');
-  element.disabled = true;
-  if (isShotgunEnabled()){
-    element.disabled = false;
+  //element.disabled = true;
+  if (isShotgunEnabled()) {
+      element.disabled = false;
+      check = 1;
+  } else {
+      element.disabled = true;
+  }
+  if (check == 1) {
+      enableShotgun();
   }
 }
 
@@ -12,4 +19,9 @@ function isShotgunEnabled(){
     isEnabled = data;
   });
   return isEnabled;
+}
+
+function disableShotgun() {
+    var element = document.getElementById('firebaseCall');
+    element.disabled = true;
 }

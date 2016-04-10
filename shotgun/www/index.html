@@ -29,30 +29,36 @@
       <script src="js/firebaseDB_SG.js"></script>   <!--IMPORTANT-->
 
   </head>
-  <body ng-app="starter">
+<body ng-app="starter">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-          <input type="button" id="shotguncall" name="Call" value="Call" onclick="callLocation()">
-          <br>
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Ionic Blank Starter</h1>
+        </ion-header-bar>
+        <ion-content>
+            <input type="button" id="shotguncall" name="Call" value="Call" onclick="callLocation()">
+            <br>
 
-          <div id="geolocation">
-          </div>
-          <div id="fbase">
-              <input type="button" id="firebaseCall" value="firebase test" onclick="determineSG('Leon')">
-          </div>
-          <form action="http://localhost:1337/swag" method="POST">
-            <input type="submit" value="Enable Shotgun"/>
-          </form>
-      </ion-content>
+            <div id="geolocation">
+            </div>
+            <div id="fbase">
+                <input type="button" id="firebaseCall" value="firebase test" onclick="determineSG('Leon')" >
+               <!-- <input type="button" id="firebaseCall2" value="firebase test" onclick="determineSG('Leon')"> -->
+            </div>
+            <form action="http://localhost:1337/swag" method="POST">
+                <input type="submit" value="Enable Shotgun" />
+            </form>
+        </ion-content>
     </ion-pane>
     <script>
-    window.setInterval(function(){
-      enableShotgun()
-    }, 5000);
+        window.setTimeout(function () {
+            disableShotgun()
+        }, 900);
+
+        window.setInterval(function () {
+            enableShotgun()
+        }, 5000);
+
     </script>
-  </body>
+</body>
 </html>
