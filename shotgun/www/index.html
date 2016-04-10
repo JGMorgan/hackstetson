@@ -33,20 +33,23 @@
 
     <ion-pane>
         <ion-header-bar class="bar-stable">
-            <h1 class="title">Ionic Blank Starter</h1>
+            <h1 class="title">Really Cool Shotgun Game</h1>
         </ion-header-bar>
         <ion-content>
-            <input type="button" id="shotguncall" name="Call" value="Get Location" onclick="callLocation()">
+            <input type="button" id="shotguncall" name="Call" value="Get Location" onclick="callLocation()" class="button button-positive button-large button-block">
+            <!--<a ui-sref="passenger" id="shotguncall" onclick="callLocation()" class="button button-positive button-large button-block">Get Location</a>-->
             <br>
 
             <div id="geolocation">
             </div>
             <div id="fbase">
-                <input type="button" id="firebaseCall" value="SHOTGUN" onclick="determineSG('Leon')" >
+                <input type="button" id="firebaseCall" value="SHOTGUN" onclick="determineSG('Leon')" class="button button-positive button-large button-block">
+               <!-- <a ui-sref="passenger" id="firebaseCall" onclick="determineSG('Leon')" class="button button-positive button-large button-block">Call Shotgun</a>-->
                <!-- <input type="button" id="firebaseCall2" value="firebase test" onclick="determineSG('Leon')"> -->
             </div>
             <form action="http://localhost:1337/swag" method="POST">
-                <input type="submit" value="Enable Shotgun" />
+                <input type="submit" value="Enable Shotgun" class="button button-positive button-large button-block"/>
+                <!--<a ui-sref="passenger" id="firebaseCall" value="Enable Shotgun" class="button button-positive button-large button-block">Enable Shotgun</a>-->
             </form>
         </ion-content>
     </ion-pane>

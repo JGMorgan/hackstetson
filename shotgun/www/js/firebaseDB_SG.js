@@ -30,7 +30,7 @@ function determineSG(name) {
             if (childData == "yes") {
                 wkk = 1;
                 //return true;
-                alert("shotgun has been called!");
+                alert("Sorry! Shotgun has already been called!");
                 return true;
             } else {
                 //wkk = 3;
