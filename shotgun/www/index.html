@@ -23,7 +23,7 @@
 
       <!-- your geofence's js -->
       <script src="js/geofencing_SG.js"></script>   <!--IMPORTANT-->
-      <script src="js/driverfunctionality.js"></script> 
+      <script src="js/driverfunctionality.js"></script>
       <!--Fire base script-->
      <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>   <!--IMPORTANT-->
       <script src="js/firebaseDB_SG.js"></script>   <!--IMPORTANT-->
@@ -44,14 +44,17 @@
           <div id="fbase">
               <input type="button" id="firebaseCall" value="firebase test" onclick="determineSG('Leon')">
           </div>
-          <form action="http://localhost:1337/swag" method="POST">
+          <form action="http://52.1.228.101:1337/swag" method="POST">
             <input type="submit" value="Enable Shotgun"/>
           </form>
       </ion-content>
     </ion-pane>
     <script>
     window.setInterval(function(){
-      enableShotgun()
+      var element = document.getElementById('firebaseCall');
+      if(element.disabled == false){
+        enableShotgun()
+      }
     }, 5000);
     </script>
   </body>

@@ -8,7 +8,7 @@ function enableShotgun(){
 
 function isShotgunEnabled(){
   isEnabled = false;
-  $.get("http://localhost:1337/swag", function(data){
+  $.get("http://52.1.228.101:1337/swag", function(data){
     isEnabled = data;
   });
   return isEnabled;
