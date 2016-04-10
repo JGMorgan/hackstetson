@@ -73,13 +73,15 @@ var sendNotification = function (error) {
 }
 
 function driverStart() {
+    /*
     navigator.notification.alert(
     'You are shotgun!',  // message
     sendNotification,         // callback
     'Game Over',            // title
     'Done'                  // buttonName
     );
-
+    */
+    alert("You are shotgun!");
     //
 
 }
